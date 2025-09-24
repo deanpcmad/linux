@@ -100,6 +100,9 @@ sudo dnf install gh --repo gh-cli
 # Nerd Font
 sudo dnf install cascadia-mono-nf-fonts
 # Then reopen terminal, create a profile with the NerdFont
+
+# MPV
+sudo dnf install mpv
 ```
 
 ## AI Tools
