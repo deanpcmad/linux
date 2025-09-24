@@ -76,7 +76,7 @@ sudo dnf install nextcloud-client
 # Others inc Discord from the RPM Fusion Repo
 sudo dnf install thunderbird
 sudo dnf install discord
-flatpak install spotify
+flatpak install com.spotify.Client
 flatpak install md.obsidian.Obsidian
 
 # 1Password
