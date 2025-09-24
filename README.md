@@ -82,12 +82,15 @@ flatpak install md.obsidian.Obsidian
 # 1Password
 sudo dnf install 1password
 
-## VSCode
+# VSCode
 sudo dnf install code
 
-## Tailscale
+# Tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
+
+# Nord VPN
+sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh) -p nordvpn-gui
 ```
 
 ## KDE Tweaks
