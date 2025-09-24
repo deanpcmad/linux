@@ -64,6 +64,10 @@ ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gitignore ~/.gitignore
 ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/irbrc ~/.irbrc
 ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gemrc ~/.gemrc
 
+# Edit .zshrc to set plugins. The git plugin isn't needed:
+`plugins=(mise deanpcmad)`
+
+
 # Reload Zsh
 source ~/.zshrc
 
