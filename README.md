@@ -97,6 +97,14 @@ sudo dnf install cascadia-mono-nf-fonts
 # Then reopen terminal, create a profile with the NerdFont
 ```
 
+## AI Tools
+
+```
+npm install -g @anthropic-ai/claude-code
+npm install -g @google/gemini-cli
+npm install -g @openai/codex
+```
+
 ## KDE Tweaks
 
 Open System Settings
