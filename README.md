@@ -91,6 +91,10 @@ sudo tailscale up
 
 # Nord VPN
 sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh) -p nordvpn-gui
+
+# Nerd Font
+sudo dnf install cascadia-mono-nf-fonts
+# Then reopen terminal, create a profile with the NerdFont
 ```
 
 ## KDE Tweaks
