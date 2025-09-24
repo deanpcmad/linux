@@ -19,7 +19,7 @@ sudo dnf update
 
 
 # Main Tools
-sudo dnf install @development-tools htop btop wget curl rust cargo openssl-devel libyaml-devel zlib-devel gmp-devel mysql-devel make automake gcc gcc-c++ kernel-devel
+sudo dnf install @development-tools htop btop wget curl xclip rust cargo openssl-devel libyaml-devel zlib-devel gmp-devel mysql-devel make automake gcc gcc-c++ kernel-devel
 
 # Google Chrome (once extra repos are enabled)
 sudo dnf install google-chrome-stable
