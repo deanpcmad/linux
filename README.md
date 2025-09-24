@@ -105,6 +105,8 @@ sudo dnf install cascadia-mono-nf-fonts
 sudo dnf install mpv
 ```
 
+Might need to disable SELinux - https://docs.fedoraproject.org/en-US/quick-docs/selinux-changing-states-and-modes/#_disabling_selinux
+
 ## AI Tools
 
 ```
