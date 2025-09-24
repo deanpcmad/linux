@@ -86,3 +86,17 @@ sudo dnf install code
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up
 ```
+
+## KDE Tweaks
+
+Open System Settings
+
+- Appearance > Breeze Dark
+- Input & Output > Mouse & Touchpad > Trackpad 
+	- Enable Invert scroll
+
+
+Dolphin
+- Configure > Startup
+	- Show on startup > <home folder>
+- Enable 'Details view mode' and set zoom to 16
