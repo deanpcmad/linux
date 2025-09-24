@@ -92,6 +92,11 @@ sudo tailscale up
 # Nord VPN
 sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh) -p nordvpn-gui
 
+# GitHub CLI
+sudo dnf install dnf5-plugins
+sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh --repo gh-cli
+
 # Nerd Font
 sudo dnf install cascadia-mono-nf-fonts
 # Then reopen terminal, create a profile with the NerdFont
