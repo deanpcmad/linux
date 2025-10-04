@@ -110,6 +110,15 @@ sudo dnf install mpv
 
 Might need to disable SELinux - https://docs.fedoraproject.org/en-US/quick-docs/selinux-changing-states-and-modes/#_disabling_selinux
 
+## OpenSSH Server
+
+This is optional, but useful for remote access through Tailscale SSH.
+
+```
+sudo systemctl start sshd.service
+sudo systemctl enable sshd.service
+```
+
 ## AI Tools
 
 ```
