@@ -6,6 +6,9 @@
 # RPM Fusion
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+# Don't use the RPM Fusion Mirror, as sometimes it can pick a mirror which is down
+sudo sed -i -E '/^ *metalink=/s/^/# /;/^ *# *baseurl=/s/^# *//' /etc/yum.repos.d/rpmfusion-*.repo
+
 # 1Password Repo
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
 sudo sh -c 'echo -e "[1password]\nname=1Password Stable Channel\nbaseurl=https://downloads.1password.com/linux/rpm/stable/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password.repo'
