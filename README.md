@@ -34,7 +34,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 sudo wget -O /opt/docker-compose.yml https://raw.githubusercontent.com/deanpcmad/fedora/refs/heads/main/docker-compose.yml
-docker compose -f /opt/docker-compose.yml up -d
+sudo docker compose -f /opt/docker-compose.yml up -d
 
 # Mise
 sudo dnf copr enable jdxcode/mise
