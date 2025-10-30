@@ -103,6 +103,11 @@ ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gitignore ~/.gitignore
 ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/irbrc ~/.irbrc
 ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gemrc ~/.gemrc
 
+# Trying out RV
+# curl --proto '=https' --tlsv1.2 -LsSf https://github.com/spinel-coop/rv/releases/download/v0.2.0/rv-installer.sh | sh
+# echo 'export PATH=$HOME/.cargo/bin:$PATH' >> ~/.zshrc
+# echo 'eval "$(rv shell init zsh)"' >> ~/.zshrc
+
 # Reload Zsh
 source ~/.zshrc
 
