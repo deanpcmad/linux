@@ -36,52 +36,20 @@ sudo usermod -aG docker dean
 sudo wget -O /opt/docker-compose.yml https://raw.githubusercontent.com/deanpcmad/fedora/refs/heads/main/docker-compose.yml
 sudo docker compose -f /opt/docker-compose.yml up -d
 
-mise use -g bun@latest
-mise use -g ruby@latest
-mise use -g node@lts
-
-# Zsh
-sudo apt install zsh -y
-
-# Oh my Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Starship
-curl -sS https://starship.rs/install.sh | sh
-echo 'eval "$(starship init zsh)"' >> ~/.zshrc
-
-# Try
-mkdir -p ~/.local/bin
-curl -sL https://raw.githubusercontent.com/tobi/try/refs/heads/main/try.rb > ~/.local/bin/try.rb
-chmod +x ~/.local/bin/try.rb
-echo 'eval "$(~/.local/bin/try.rb init ~/code/tries)"' >> ~/.zshrc
-
-# Zsh Plugin
-git clone https://github.com/deanpcmad/zsh-plugin.git ~/.oh-my-zsh/custom/plugins/deanpcmad
-# Then edit .zshrc to set plugins. The git plugin isn't needed: plugins=(mise deanpcmad)
-
-ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gitconfig ~/.gitconfig
-ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gitignore ~/.gitignore
-ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/irbrc ~/.irbrc
-ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gemrc ~/.gemrc
-
-# Reload Zsh
-source ~/.zshrc
-
 # Nextcloud
 sudo add-apt-repository -y ppa:nextcloud-devs/client
 sudo apt install -y nextcloud-client
 
 # Flatpak
 sudo apt install -y flatpak gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-flatpak install com.spotify.Client
-flatpak install md.obsidian.Obsidian
+flatpak install -y com.spotify.Client
+flatpak install -y md.obsidian.Obsidian
 
 # 1Password
 wget https://downloads.1password.com/linux/debian/amd64/stable/1password-latest.deb
-sudo apt install -f ./1password-latest.deb
+sudo apt install -y -f ./1password-latest.deb
 rm 1password-latest.deb
 
 # Tailscale
@@ -109,3 +77,35 @@ rm -rf CascadiaMono.zip CascadiaFont
 
 # MPV
 sudo apt install -y mpv
+
+# Zsh
+sudo apt install -y zsh
+
+# Oh my Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Starship
+curl -sS https://starship.rs/install.sh | sh
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+
+# Try
+mkdir -p ~/.local/bin
+curl -sL https://raw.githubusercontent.com/tobi/try/refs/heads/main/try.rb > ~/.local/bin/try.rb
+chmod +x ~/.local/bin/try.rb
+echo 'eval "$(~/.local/bin/try.rb init ~/code/tries)"' >> ~/.zshrc
+
+# Zsh Plugin
+git clone https://github.com/deanpcmad/zsh-plugin.git ~/.oh-my-zsh/custom/plugins/deanpcmad
+# Then edit .zshrc to set plugins. The git plugin isn't needed: plugins=(mise deanpcmad)
+
+ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gitconfig ~/.gitconfig
+ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gitignore ~/.gitignore
+ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/irbrc ~/.irbrc
+ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gemrc ~/.gemrc
+
+# Reload Zsh
+source ~/.zshrc
+
+mise use -g bun@latest
+mise use -g ruby@latest
+mise use -g node@lts
