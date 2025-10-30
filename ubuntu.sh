@@ -57,7 +57,7 @@ chmod +x ~/.local/bin/try.rb
 echo 'eval "$(~/.local/bin/try.rb init ~/code/tries)"' >> ~/.zshrc
 
 # Zsh Plugin
-git clone git@github.com:deanpcmad/zsh-plugin.git ~/.oh-my-zsh/custom/plugins/deanpcmad
+git clone https://github.com/deanpcmad/zsh-plugin.git ~/.oh-my-zsh/custom/plugins/deanpcmad
 # Then edit .zshrc to set plugins. The git plugin isn't needed: plugins=(mise deanpcmad)
 
 ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gitconfig ~/.gitconfig
