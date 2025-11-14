@@ -73,6 +73,19 @@ ln -s ~/.oh-my-zsh/custom/plugins/deanpcmad/gemrc ~/.gemrc
 # Reload Zsh
 source ~/.zshrc
 
+# Kopia
+sudo rpm --import https://kopia.io/signing-key
+cat <<EOF | sudo tee /etc/yum.repos.d/kopia.repo
+[Kopia]
+name=Kopia
+baseurl=http://packages.kopia.io/rpm/stable/\$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://kopia.io/signing-key
+EOF
+sudo dnf install kopia kopia-ui
+
+
 # Nextcloud
 sudo dnf install nextcloud-client
 
